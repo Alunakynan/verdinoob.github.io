@@ -1,0 +1,544 @@
+body {
+    background-color: #f8f9fa;
+  }
+  .profile-img {
+    width: 190px;
+    border-radius: 50%;
+  }
+  .section-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .social-icons a {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 50%; /* To make it circular */
+    transition: all 0.3s ease; /* Smooth transition */
+    padding: 10px; /* Optional padding for a better hover effect */
+    background-color: transparent; /* Initially no background */
+  }
+
+  .social-icons a:hover {
+    background: linear-gradient(135deg, #ffffff, #A594F9);
+    transform: scale(1.1); /* Optional scaling effect */
+    box-shadow: 0 0 10px rgba(7, 23, 161, 0.7)
+  }
+
+  .social-icons a i {
+    color: #ffffff; /* Icon color */
+    font-size: 35px; /* Icon size */
+    transition: color 0.3s ease; /* Smooth transition for the color */
+  }
+
+  .social-icons a:hover i {
+    color: #6547fc; /* Change icon color when hovered */
+    box-shadow: #0ef;
+  }
+
+
+
+
+  .home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #A594F9;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #A594F9;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+}
+.home-sci a:hover{
+    background: #A594F9;
+    color: #081b29;
+    box-shadow: 0 0 20px #A594F9;
+}
+
+@media (max-width: 768px) {
+  .contact {
+      grid-template-columns: 1fr; /* Agar layout menjadi satu kolom di layar kecil */
+  }
+}
+@keyframes slideLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.card {
+    background: linear-gradient(135deg, #6487c7, #4c1b9b); /* Gradient background */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    color: #fff; /* White text color */
+    padding: 20px; 
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .card-header {
+    font-size: large;
+    background-color: transparent; /* Remove default header background */
+    font-weight: bold; /* Bold text for header */
+    color: #ffffff; /* White text for header */
+  }
+  
+  .card-body {
+    background-color: rgba(255, 255, 255, 0.3); /* Light background for content */
+    border-radius: 15px;
+    padding: 15px;
+
+  }
+  
+  .card-text {
+    color: #f5f5f5; /* Light text color */
+  }
+  
+  h5.card-title {
+    color: #fff; /* Ensure the title is white */
+    font-weight: bold;
+  }
+
+  .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    justify-content: center;
+    align-items: center; 
+    margin-left: 25px;
+    margin-right: 25px;
+    gap: 20px; 
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Agar elemen tersebar horizontal */
+    align-items: center; /* Agar elemen tersebar vertikal */
+}
+
+/* 
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+   
+    gap: 20px; 
+    
+}  */
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Membuat kolom responsif */
+    gap: 20px;
+}
+
+
+.row img {
+    width: 100%; 
+    display: block;
+    border-radius: 25px;
+    transition: transform 0.5s ease;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.411),#0ef);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+    
+
+} 
+
+.layer h5{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+}
+.layer p{
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8;
+
+}
+.layer i{
+    color: #ff004f;
+    margin-top: 20px;
+    font-size: 20px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+}
+.row:hover img{
+    transform: scale(1.1);
+
+}
+.row:hover .layer{
+    height: 100%;
+} 
+
+.contact{
+    /* display: grid; */
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    /* padding-left: 30px; */
+    padding-top: 100px;
+    margin-top: 130px;
+}
+.contact-text h2{
+    font-size: 90px;
+    line-height: 1;
+    text-align: center;
+}
+
+.alunanoob{
+padding-left: 30px;
+}
+
+.contact-text h2 span{
+    color: #4c1b9b;
+}
+.contact-text h4{
+    margin: 15px 0;
+    color: rgb(136, 130, 221);
+    font-weight: 600;
+    font-size: 20px;
+}
+.contact-text p{
+    color: rgb(105, 85, 141);
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+
+}
+.contact-list{
+    margin-bottom: 3rem;
+}
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+.contact-list i{
+    display: inline-block;
+    color: #433878;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+
+}
+.contact-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: #433878;
+}
+.contact-icons i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #433878;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #433878;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.contact-icons i:hover{
+    background: #433878;
+    color: #000;
+    box-shadow: 0 0 20px #433878;
+}
+
+@media (max-width: 768px) {
+  .contact {
+      grid-template-columns: 1fr; /* Agar layout menjadi satu kolom di layar kecil */
+  }
+}
+
+@media (max-width: 768px) {
+    .row {
+        display: grid;
+        grid-template-columns: 1fr; /* Mengubah menjadi satu kolom */
+    }
+}
+
+@keyframes slideLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+
+
+.skills-grid {
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 20px;
+    flex-wrap: nowrap; /* Membuat layout tetap horizontal di semua ukuran layar */
+  }
+  
+  .skills-grid .card {
+    flex-basis: 20%; /* Setiap kartu akan menempati 30% dari lebar kontainer */
+    max-width: 70%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .skills-grid .card-body {
+    text-align: center;
+  }
+  
+  .skills-grid h5 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .skills-grid p {
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .skills-grid {
+      flex-wrap: wrap; /* Membuat kartu membungkus jika layar terlalu kecil */
+    }
+  
+    .skills-grid .card {
+      flex-basis: 100%; /* Membuat setiap kartu menempati seluruh lebar pada layar kecil */
+      max-width: 100%;
+    }
+  }
+
+  .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    justify-content: center;
+    align-items: center; 
+    margin-left: 25px;
+    margin-right: 25px;
+    gap: 20px; 
+    
+}
+
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+   
+    gap: 20px; 
+    
+} 
+
+.row img {
+    width: 100%; 
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(#0ef);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+    
+
+} 
+
+.layer h5{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-weight: bold;
+
+}
+.layer p{
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8;
+
+}
+.layer i{
+    color: #ff004f;
+    margin-top: 20px;
+    font-size: 20px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+}
+.row:hover img{
+    transform: scale(1.1);
+
+}
+.row:hover .layer{
+    height: 100%;
+} 
+  
+
+/* From Uiverse.io by satyamchaudharydev */ 
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.bbutton{
+  text-decoration: none;
+  color: #fff;  
+}
+
+/* .home {
+    position: relative;
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: left; 
+    align-items: center; 
+    padding: 70px 10% 0; 
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
+}
+ */
